@@ -1,0 +1,45 @@
+<template>
+    <div class="doubts-container">
+        <div class="doubt-block">
+            <h3 class="doubt-title">{titulo}</h3>
+            <p class="doubt-text">{duvida}</p>
+            <span class="doubt-status">Status: {status}</span> <br>
+            
+        </div>
+
+        <lightning-textarea 
+            label="Solução" 
+            placeholder="Escreva sua solução" 
+            value={solucao} 
+            onchange={handleSolutionChange}>
+        </lightning-textarea>
+        
+        <lightning-button 
+            label="Enviar" 
+            variant="brand" 
+            onclick={sendSolutionToApex}
+            disabled={isSendDisabled}>
+        </lightning-button>
+
+        <!-- Modal -->
+        <template if:true={isModalOpen}>
+            <section class="slds-modal slds-fade-in-open">
+                <div class="slds-modal__container">
+                    <header class="slds-modal__header">
+                        <h2 class="slds-text-heading_medium">Confirmação</h2>
+                    </header>
+                    <div class="slds-modal__content slds-p-around_medium">
+                        <p>Sua solução foi enviada com sucesso!</p>
+                    </div>
+                    <footer class="slds-modal__footer">
+                        <lightning-button 
+                            label="Fechar" 
+                            onclick={closeModal}>
+                        </lightning-button>
+                    </footer>
+                </div>
+            </section>
+            <div class="slds-backdrop slds-backdrop_open"></div>
+        </template>
+    </div>
+</template>

@@ -1,0 +1,31 @@
+.navigation-container {
+    background-color: #f4f4f4; /* Cor de fundo clara */
+    border-bottom: 2px solid #0070d2; /* Borda azul na parte inferior */
+    padding: 0.5rem 1rem; /* Espaçamento interno */
+}
+
+.navigation-menu {
+    display: flex;
+    justify-content: center; /* Centraliza os itens */
+    list-style: none; /* Remove bullets */
+    padding: 0;
+    margin: 0;
+}
+
+.navigation-item {
+    margin: 0 1rem; /* Espaço entre itens */
+    font-size: 1rem; /* Tamanho da fonte */
+    font-weight: bold;
+}
+
+.navigation-item a {
+    text-decoration: none; /* Remove sublinhado */
+    color: #333; /* Cor do texto */
+    transition: color 0.3s ease-in-out; /* Transição suave */
+}
+
+.navigation-item a:hover {
+    color: #0070d2; /* Cor azul no hover */
+    border-bottom: 2px solid #0070d2; /* Destaque no hover */
+    padding-bottom: 0.2rem;
+}

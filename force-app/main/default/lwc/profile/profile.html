@@ -1,0 +1,16 @@
+<template>
+    <div class="profile-container">
+        <template if:true={products.length}>
+            <template for:each={products} for:item="product">
+                <div key={product.id} class="profile-card">
+                    <h3 class="profile-title">Bem-vindo(a), {product.username}</h3>
+                    <p class="profile-text"><strong>UserName:</strong> {product.username}</p>
+                    <p class="profile-text"><strong>Email:</strong> {product.email}</p>
+                </div>
+            </template>
+        </template>
+        <template if:false={products.length}>
+            <p class="error-message">Nenhuma informação disponível. Verifique se o e-mail está configurado corretamente.</p>
+        </template>
+    </div>
+</template>

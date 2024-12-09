@@ -1,0 +1,30 @@
+.user-info {
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    background-color: #f9f9f9;
+}
+
+.user-info__header {
+    margin-bottom: 1rem;
+}
+
+.user-info__products ul {
+    list-style: none;
+    padding: 0;
+}
+
+.user-info__products li {
+    padding: 0.5rem;
+    border-bottom: 1px solid #ddd;
+}
+
+.user-info__no-products,
+.user-info__login-prompt {
+    color: red;
+    font-weight: bold;
+}
+
+.product p {
+    margin: 0.2rem 0;
+}

@@ -1,0 +1,32 @@
+<template>
+    <template if:true={showProfile}>
+        <div class="user-info">
+            <div class="user-info__header">
+                <h1>Bem-vindo, {email}</h1>
+            </div>
+            
+            <template if:true={products}>
+                <div class="user-info__products">
+                    <h2>Seus Produtos</h2>
+                    <ul>
+                        <template for:each={products} for:item="product">
+                            <li key={product.id}>
+                                <div class="product">
+                                    <p><strong>Nome:</strong> {product.nome}</p>
+                                    <p><strong>Username:</strong> {product.username}</p>
+                                    <p><strong>E-mail:</strong> {product.email}</p>
+                                </div>
+                            </li>
+                        </template>
+                    </ul>
+                </div>
+            </template>   
+        </div>
+    </template>
+
+    <template if:false={showProfile}>
+        <div class="user-info__login-prompt">
+            <p>Você não está logado. Por favor, faça login para visualizar suas informações.</p>
+        </div>
+    </template>
+</template>

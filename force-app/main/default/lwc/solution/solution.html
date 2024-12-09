@@ -1,0 +1,18 @@
+<template>
+    <div class="solutions-container">
+        <!-- Verifica se existem produtos/soluções -->
+        <template if:true={products}>
+            <template for:each={products} for:item="product">
+                <button key={product.id} class="solution-block" data-id={product.id}>
+                    <!-- Exibe o nome do dono e o texto da solução -->
+                    <h3 class="solution-title">{product.dono}</h3>
+                    <p class="solution-text">{product.solucao}</p>
+                </button>
+            </template>
+        </template>
+        <!-- Mensagem de erro -->
+        <template if:true={error}>
+            <p class="error-message">{error}</p>
+        </template>
+    </div>
+</template>

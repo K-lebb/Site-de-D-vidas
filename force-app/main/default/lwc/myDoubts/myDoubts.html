@@ -1,0 +1,19 @@
+<template>
+    <div class="doubts-container">
+        <template for:each={products} for:item="product">
+            <div key={product.id} class="doubt-block">
+                <h3 class="doubt-title">{product.titulo}</h3>
+                <p class="doubt-text">{product.duvida}</p>
+                <span class="doubt-status">Status: {product.status}</span>
+                <br>
+
+                <a href="javascript:void(0)" 
+                   class="delete-link" 
+                   data-id={product.id} 
+                   onclick={deleteDoubt}>
+                   Apagar Dúvida
+                </a>
+            </div>
+        </template>
+    </div>
+</template>

@@ -1,0 +1,12 @@
+<template>
+    <div class="doubts-container">
+        <template for:each={products} for:item="product">
+            <button key={product.id} class="doubt-block" data-id={product.id} onclick={openDoubt}>
+                <h3 class="doubt-title">{product.titulo}</h3>
+                <p class="doubt-text">{product.duvida}</p>
+                <span class="doubt-status">Status: {product.status}</span>
+                <p class="doubt-owner">Dono: {product.dono}</p>
+            </button>
+        </template>
+    </div>
+</template>
